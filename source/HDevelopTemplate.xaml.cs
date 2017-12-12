@@ -91,6 +91,12 @@ namespace LiveCAMProject
         buttonCAM2.IsEnabled = true;
         buttonCAM3.IsEnabled = true;
         buttonCAM4.IsEnabled = true;
+
+        HDevExp.Exitloop1 = false;
+        HDevExp.Exitloop2 = true;
+        HDevExp.Exitloop3 = true;
+        HDevExp.Exitloop4 = true;
+
         hWindowControlWPF1.ImagePart = new Rect(0, 0, 1500, 300); 
 
         labelStatus.Content = "Running...";
@@ -106,6 +112,12 @@ namespace LiveCAMProject
         buttonCAM2.IsEnabled = false;
         buttonCAM3.IsEnabled = true;
         buttonCAM4.IsEnabled = true;
+
+        HDevExp.Exitloop1 = true;
+        HDevExp.Exitloop2 = false;
+        HDevExp.Exitloop3 = true;
+        HDevExp.Exitloop4 = true;
+
         hWindowControlWPF1.ImagePart = new Rect(0, 0, 1500, 300);
 
         labelStatus.Content = "Running...";
@@ -121,6 +133,12 @@ namespace LiveCAMProject
         buttonCAM2.IsEnabled = true;
         buttonCAM3.IsEnabled = false;
         buttonCAM4.IsEnabled = true;
+
+        HDevExp.Exitloop1 = true;
+        HDevExp.Exitloop2 = true;
+        HDevExp.Exitloop3 = false;
+        HDevExp.Exitloop4 = true;
+
         hWindowControlWPF1.ImagePart = new Rect(0, 0, 1500, 300);
 
         labelStatus.Content = "Running...";
@@ -136,6 +154,12 @@ namespace LiveCAMProject
         buttonCAM2.IsEnabled = true;
         buttonCAM3.IsEnabled = true;
         buttonCAM4.IsEnabled = false;
+
+        HDevExp.Exitloop1 = true;
+        HDevExp.Exitloop2 = true;
+        HDevExp.Exitloop3 = true;
+        HDevExp.Exitloop4 = false;
+
         hWindowControlWPF1.ImagePart = new Rect(0, 0, 1500, 300);
 
         labelStatus.Content = "Running...";

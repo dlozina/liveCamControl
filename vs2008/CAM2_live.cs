@@ -9,11 +9,18 @@ using HalconDotNet;
 
 public partial class HDevelopExport
 {
-  //public HTuple hv_ExpDefaultWinHandle;
+    //public HTuple hv_ExpDefaultWinHandle;
 
-  // Main procedure 
-  private void action2()
-  {
+    private bool exitloop2;
+    public bool Exitloop2
+    {
+        get { return exitloop2; }
+        set { exitloop2 = value; }
+    }
+
+    // Main procedure 
+    private void action2()
+    {
 
 
     // Local iconic variables 
@@ -33,30 +40,31 @@ public partial class HDevelopExport
 
 
     HOperatorSet.GrabImageStart(hv_AcqHandle, -1);
-    while ((int)(1) != 0)
+    //while ((int)(1) != 0)
+    while (exitloop2 == false)
     {
-      ho_Image.Dispose();
-      HOperatorSet.GrabImageAsync(out ho_Image, hv_AcqHandle, -1);
-      //Image Acquisition 01: Do something
-      HOperatorSet.DispObj(ho_Image, hv_ExpDefaultWinHandle);
+        ho_Image.Dispose();
+        HOperatorSet.GrabImageAsync(out ho_Image, hv_AcqHandle, -1);
+        //Image Acquisition 01: Do something
+        HOperatorSet.DispObj(ho_Image, hv_ExpDefaultWinHandle);
     }
     HOperatorSet.CloseFramegrabber(hv_AcqHandle);
     ho_Image.Dispose();
 
-  }
+    }
 
-  //public void InitHalcon()
-  //{
-  //  // Default settings used in HDevelop 
-  //  HOperatorSet.SetSystem("width", 512);
-  //  HOperatorSet.SetSystem("height", 512);
-  //}
+    //public void InitHalcon()
+    //{
+    //  // Default settings used in HDevelop 
+    //  HOperatorSet.SetSystem("width", 512);
+    //  HOperatorSet.SetSystem("height", 512);
+    //}
 
-  public void RunCAM2(HTuple Window)
-  {
+    public void RunCAM2(HTuple Window)
+    {
     hv_ExpDefaultWinHandle = Window;
     action2();
-  }
+    }
 
 }
 
