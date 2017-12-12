@@ -80,6 +80,9 @@
       <Link>HDevelopTemplate.xaml.cs</Link>
       <DependentUpon>HDevelopTemplate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CAM1_live.cs" />
+    <Compile Include="CAM2_live.cs" />
+    <Compile Include="CAM3_live.cs" />
     <Compile Include="CAM4_live.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

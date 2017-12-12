@@ -9,10 +9,19 @@ using HalconDotNet;
 
 public partial class HDevelopExport
 {
-  //public HTuple hv_ExpDefaultWinHandle;
+  // Handle defined for all cameras
+  public HTuple hv_ExpDefaultWinHandle;
+
+  // Init defined for all cameras
+  public void InitHalcon()
+  {
+    // Default settings used in HDevelop 
+    HOperatorSet.SetSystem("width", 512);
+    HOperatorSet.SetSystem("height", 512);
+  }
 
   // Main procedure 
-  private void action4()
+  private void action1()
   {
 
 
@@ -25,10 +34,13 @@ public partial class HDevelopExport
     HTuple hv_AcqHandle = null;
     // Initialize local and output iconic variables 
     HOperatorSet.GenEmptyObj(out ho_Image);
+    //CAM 4 Diametri
+    //HOperatorSet.OpenFramegrabber("GigEVision", 0, 0, 0, 0, 0, 0, "default", -1, 
+    //    "default", -1, "false", "default", "GC3851M_CAM_4", 0, -1, out hv_AcqHandle);
     
-    // CAM 4 Poroznost
+    // CAM 1 Robot
     HOperatorSet.OpenFramegrabber("GigEVision", 0, 0, 0, 0, 0, 0, "default", -1, 
-        "default", -1, "false", "default", "GC3851M_CAM_4", 0, -1, out hv_AcqHandle);
+        "default", -1, "false", "default", "acA130075gm_CAM", 0, -1, out hv_AcqHandle);
 
 
 
@@ -45,17 +57,10 @@ public partial class HDevelopExport
 
   }
 
-  //public void InitHalcon()
-  //{
-  //  // Default settings used in HDevelop 
-  //  HOperatorSet.SetSystem("width", 512);
-  //  HOperatorSet.SetSystem("height", 512);
-  //}
-
-  public void RunCAM4(HTuple Window)
+  public void RunCAM1(HTuple Window)
   {
     hv_ExpDefaultWinHandle = Window;
-    action4();
+    action1();
   }
 
 }

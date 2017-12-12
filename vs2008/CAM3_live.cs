@@ -12,7 +12,7 @@ public partial class HDevelopExport
   //public HTuple hv_ExpDefaultWinHandle;
 
   // Main procedure 
-  private void action4()
+  private void action3()
   {
 
 
@@ -26,9 +26,9 @@ public partial class HDevelopExport
     // Initialize local and output iconic variables 
     HOperatorSet.GenEmptyObj(out ho_Image);
     
-    // CAM 4 Poroznost
-    HOperatorSet.OpenFramegrabber("GigEVision", 0, 0, 0, 0, 0, 0, "default", -1, 
-        "default", -1, "false", "default", "GC3851M_CAM_4", 0, -1, out hv_AcqHandle);
+    
+    // CAM 3 Poroznost
+    
 
 
 
@@ -52,10 +52,10 @@ public partial class HDevelopExport
   //  HOperatorSet.SetSystem("height", 512);
   //}
 
-  public void RunCAM4(HTuple Window)
+  public void RunCAM3(HTuple Window)
   {
     hv_ExpDefaultWinHandle = Window;
-    action4();
+    action3();
   }
 
 }

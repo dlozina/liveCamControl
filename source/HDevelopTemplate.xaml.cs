@@ -27,7 +27,7 @@ namespace LiveCAMProject
     // Window Export.
     private HDevelopExport HDevExp;
 
-    public HDevelopTemplate()
+    public HDevelopTemplate() // Constructor
     {
       InitializeComponent();
 
@@ -36,28 +36,111 @@ namespace LiveCAMProject
 
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
-      //HDevExp.InitHalcon();
+        HDevExp.InitHalcon();
     }
 
-    private void RunExport()
+    private void RunExport1()
     {
-      HTuple WindowID = hWindowControlWPF1.HalconID;
-      HDevExp.RunHalcon(WindowID);
+        HTuple WindowID = hWindowControlWPF1.HalconID;
+        HDevExp.RunCAM1(WindowID);
 
-      this.Dispatcher.Invoke(new Action(() => {
+        this.Dispatcher.Invoke(new Action(() => {
         labelStatus.Content = "Finished.";
-        buttonRun.IsEnabled = true;
-      }));
+        buttonCAM1.IsEnabled = true;
+        }));
     }
 
-    private void buttonRun_Click(object sender, RoutedEventArgs e)
+    private void RunExport2()
     {
-      buttonRun.IsEnabled = false;
-      labelStatus.Content = "Running...";
-      labelStatus.UpdateLayout();
+        HTuple WindowID = hWindowControlWPF1.HalconID;
+        HDevExp.RunCAM2(WindowID);
 
-      Thread exportThread = new Thread(new ThreadStart(this.RunExport));
-      exportThread.Start();
+        this.Dispatcher.Invoke(new Action(() => {
+        labelStatus.Content = "Finished.";
+        buttonCAM1.IsEnabled = true;
+        }));
+    }
+
+    private void RunExport3()
+    {
+        HTuple WindowID = hWindowControlWPF1.HalconID;
+        HDevExp.RunCAM3(WindowID);
+
+        this.Dispatcher.Invoke(new Action(() => {
+        labelStatus.Content = "Finished.";
+        buttonCAM1.IsEnabled = true;
+        }));
+    }
+
+    private void RunExport4()
+    {
+        HTuple WindowID = hWindowControlWPF1.HalconID;
+        HDevExp.RunCAM4(WindowID);
+
+        this.Dispatcher.Invoke(new Action(() => {
+        labelStatus.Content = "Finished.";
+        buttonCAM1.IsEnabled = true;
+        }));
+    }
+    
+    // Button Control
+    
+    private void buttonCAM1_Click(object sender, RoutedEventArgs e)
+    {
+        buttonCAM1.IsEnabled = false;
+        buttonCAM2.IsEnabled = true;
+        buttonCAM3.IsEnabled = true;
+        buttonCAM4.IsEnabled = true;
+
+        labelStatus.Content = "Running...";
+        labelStatus.UpdateLayout();
+
+        Thread exportThread = new Thread(new ThreadStart(this.RunExport1));
+        exportThread.Start();
+    }
+
+    private void buttonCAM2_Click(object sender, RoutedEventArgs e)
+    {
+        buttonCAM1.IsEnabled = true;
+        buttonCAM2.IsEnabled = false;
+        buttonCAM3.IsEnabled = true;
+        buttonCAM4.IsEnabled = true;
+        labelStatus.Content = "Running...";
+        labelStatus.UpdateLayout();
+
+        Thread exportThread = new Thread(new ThreadStart(this.RunExport2));
+        exportThread.Start();
+    }
+
+    private void buttonCAM3_Click(object sender, RoutedEventArgs e)
+    {
+        buttonCAM1.IsEnabled = true;
+        buttonCAM2.IsEnabled = true;
+        buttonCAM3.IsEnabled = false;
+        buttonCAM4.IsEnabled = true;
+        labelStatus.Content = "Running...";
+        labelStatus.UpdateLayout();
+
+        Thread exportThread = new Thread(new ThreadStart(this.RunExport3));
+        exportThread.Start();
+    }
+
+    private void buttonCAM4_Click(object sender, RoutedEventArgs e)
+    {
+        buttonCAM1.IsEnabled = true;
+        buttonCAM2.IsEnabled = true;
+        buttonCAM3.IsEnabled = true;
+        buttonCAM4.IsEnabled = false;
+        labelStatus.Content = "Running...";
+        labelStatus.UpdateLayout();
+
+        Thread exportThread = new Thread(new ThreadStart(this.RunExport4));
+        exportThread.Start();
+    }
+
+    private void buttonCloseAll_Click(object sender, RoutedEventArgs e)
+    {
+        HOperatorSet.CloseAllFramegrabbers();
     }
 
   }
