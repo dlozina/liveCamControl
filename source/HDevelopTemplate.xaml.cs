@@ -171,6 +171,11 @@ namespace LiveCAMProject
 
     private void buttonStopLive_Click(object sender, RoutedEventArgs e)
     {
+        buttonCAM1.IsEnabled = true;
+        buttonCAM2.IsEnabled = true;
+        buttonCAM3.IsEnabled = true;
+        buttonCAM4.IsEnabled = true;
+
         HDevExp.Exitloop1 = true;
         HDevExp.Exitloop2 = true;
         HDevExp.Exitloop3 = true;
