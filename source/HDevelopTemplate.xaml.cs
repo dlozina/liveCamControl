@@ -97,7 +97,7 @@ namespace LiveCAMProject
         HDevExp.Exitloop3 = true;
         HDevExp.Exitloop4 = true;
 
-        hWindowControlWPF1.ImagePart = new Rect(0, 0, 1500, 300); 
+        hWindowControlWPF1.ImagePart = new Rect(0, 0, 1280, 1024); 
 
         labelStatus.Content = "Running...";
         labelStatus.UpdateLayout();
@@ -118,7 +118,7 @@ namespace LiveCAMProject
         HDevExp.Exitloop3 = true;
         HDevExp.Exitloop4 = true;
 
-        hWindowControlWPF1.ImagePart = new Rect(0, 0, 1500, 300);
+        hWindowControlWPF1.ImagePart = new Rect(0, 0, 3856, 2764);
 
         labelStatus.Content = "Running...";
         labelStatus.UpdateLayout();
@@ -139,7 +139,7 @@ namespace LiveCAMProject
         HDevExp.Exitloop3 = false;
         HDevExp.Exitloop4 = true;
 
-        hWindowControlWPF1.ImagePart = new Rect(0, 0, 1500, 300);
+        hWindowControlWPF1.ImagePart = new Rect(0, 0, 3856, 2764);
 
         labelStatus.Content = "Running...";
         labelStatus.UpdateLayout();
@@ -160,7 +160,7 @@ namespace LiveCAMProject
         HDevExp.Exitloop3 = true;
         HDevExp.Exitloop4 = false;
 
-        hWindowControlWPF1.ImagePart = new Rect(0, 0, 1500, 300);
+        hWindowControlWPF1.ImagePart = new Rect(0, 0, 3856, 2764);
 
         labelStatus.Content = "Running...";
         labelStatus.UpdateLayout();
