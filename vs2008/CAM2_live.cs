@@ -50,6 +50,7 @@ public partial class HDevelopExport
     }
     HOperatorSet.CloseFramegrabber(hv_AcqHandle);
     ho_Image.Dispose();
+    HOperatorSet.ClearWindow(hv_ExpDefaultWinHandle);
 
     }
 
