@@ -54,6 +54,7 @@ namespace LiveCAMProject
     {
         HTuple WindowID = hWindowControlWPF1.HalconID;
         HDevExp.RunCAM2(WindowID);
+        //HDevExp.RunSync(WindowID);
 
         this.Dispatcher.Invoke(new Action(() => {
         labelStatus.Content = "Finished.";
