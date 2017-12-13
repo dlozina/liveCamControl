@@ -169,6 +169,14 @@ namespace LiveCAMProject
         exportThread.Start();
     }
 
+    private void buttonStopLive_Click(object sender, RoutedEventArgs e)
+    {
+        HDevExp.Exitloop1 = true;
+        HDevExp.Exitloop2 = true;
+        HDevExp.Exitloop3 = true;
+        HDevExp.Exitloop4 = true;
+    }
+
     private void buttonCloseAll_Click(object sender, RoutedEventArgs e)
     {
         HOperatorSet.CloseAllFramegrabbers();
