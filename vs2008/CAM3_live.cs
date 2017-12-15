@@ -32,14 +32,12 @@ public partial class HDevelopExport
     HTuple hv_AcqHandle = null;
     // Initialize local and output iconic variables 
     HOperatorSet.GenEmptyObj(out ho_Image);
-    
-    
+
     // CAM 3 Poroznost
-    
-
-
-
+    HOperatorSet.OpenFramegrabber("GigEVision", 0, 0, 0, 0, 0, 0, "default", -1, 
+        "default", -1, "false", "default", "GC2591MP_CAM_3", 0, -1, out hv_AcqHandle);
     HOperatorSet.GrabImageStart(hv_AcqHandle, -1);
+
     //while ((int)(1) != 0)
     while (exitloop3 == false)
     {

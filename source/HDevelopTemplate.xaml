@@ -9,7 +9,7 @@
             <ColumnDefinition Width="889*" />
         </Grid.ColumnDefinitions>
         <!-- Main CAM window-->
-        <my:HWindowControlWPF Margin="25,25,180,60" Name="hWindowControlWPF1" Grid.ColumnSpan="2"/>
+        <my:HWindowControlWPF Margin="25,25,180,60" Name="hWindowControlWPF1" Grid.ColumnSpan="2" />
         <Button Grid.Column="1"  Height="40" HorizontalAlignment="Right" Margin="0,30,28,0" x:Name="buttonCAM1" VerticalAlignment="Top" Width="112" Click="buttonCAM1_Click" Content="CAM1"/>
         <Button Grid.Column="1" Height="40" HorizontalAlignment="Right" Margin="0,90,28,0" x:Name="buttonCAM2" VerticalAlignment="Top" Width="112" Click="buttonCAM2_Click" Content="CAM2"/>
         <Button Grid.Column="1" Height="40" HorizontalAlignment="Right" Margin="0,150,28,0" x:Name="buttonCAM3" VerticalAlignment="Top" Width="112" Click="buttonCAM3_Click" Content="CAM3"/>

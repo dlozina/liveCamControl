@@ -35,7 +35,7 @@ public partial class HDevelopExport
     // CAM 4 Poroznost
     HOperatorSet.OpenFramegrabber("GigEVision", 0, 0, 0, 0, 0, 0, "default", -1, 
         "default", -1, "false", "default", "GC3851M_CAM_4", 0, -1, out hv_AcqHandle);
-
+    HOperatorSet.SetFramegrabberParam(hv_AcqHandle, "ExposureTime", 3500.0);
 
 
     HOperatorSet.GrabImageStart(hv_AcqHandle, -1);

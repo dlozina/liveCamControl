@@ -37,8 +37,6 @@ public partial class HDevelopExport
     HOperatorSet.OpenFramegrabber("GigEVision", 0, 0, 0, 0, 0, 0, "default", -1, 
         "default", -1, "false", "default", "GC3851MP_CAM_2", 0, -1, out hv_AcqHandle);
 
-
-
     HOperatorSet.GrabImageStart(hv_AcqHandle, -1);
     //while ((int)(1) != 0)
     while (exitloop2 == false)
