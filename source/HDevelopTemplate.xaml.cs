@@ -118,7 +118,6 @@ namespace LiveCAMProject
         HDevExp.Exitloop2 = false;
         HDevExp.Exitloop3 = true;
         HDevExp.Exitloop4 = true;
-
         
         hWindowControlWPF1.ImagePart = new Rect(0, 0, 3856, 2764);
 
